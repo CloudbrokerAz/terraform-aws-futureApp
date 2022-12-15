@@ -174,7 +174,7 @@ resource "null_resource" "configure-cat-app" {
       "cd /var/www/html",
       "rm index.html",
       "git clone https://github.com/CloudbrokerAz/theFutureHasLanded.git .",
-      "LOCATION=${var.location} PREFIX=${var.prefix} /home/${var.admin_username}/deploy_app.sh",
+      "LOCATION=${var.region} PREFIX=${var.prefix} /home/${var.admin_username}/deploy_app.sh",
       "sudo apt-get remove certbot",
       "sudo snap install --classic certbot",
       "sudo ln -s /snap/bin/certbot /usr/bin/certbot",
