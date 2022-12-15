@@ -169,7 +169,7 @@ resource "null_resource" "configure-cat-app" {
       "sudo apt -y update",
       "sudo apt -y install apache2",
       "sudo systemctl start apache2",
-      "sudo chown -R ubuntu:ubuntu /var/www/html",
+      "sudo chown -R ${var.admin_username}:${var.admin_username} /var/www/html",
       "chmod +x *.sh",
       "cd /var/www/html",
       "rm index.html",
