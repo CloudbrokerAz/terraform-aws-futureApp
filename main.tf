@@ -178,7 +178,7 @@ resource "null_resource" "configure-cat-app" {
       "sudo apt-get remove certbot",
       "sudo snap install --classic certbot",
       "sudo ln -s /snap/bin/certbot /usr/bin/certbot",
-      "sudo certbot --agree-tos --apache --renew-by-default --register-unsafely-without-email -d ${var.prefix}-future.${var.location}.cloudapp.azure.com",
+      "sudo certbot --agree-tos --apache --renew-by-default --register-unsafely-without-email -d ${aws_eip.hashicat.public_ip}.ap-southeast-2.compute.amazonaws.com",
       "sudo apt -y install cowsay",
       "cowsay Mooooooooooo!",
     ]

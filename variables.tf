@@ -9,7 +9,7 @@ variable "prefix" {
   description = "This prefix will be included in the name of most resources."
 }
 
-variable "region" {
+variable "location" {
   description = "The region where the resources are created."
   default     = "ap-southeast-2"
 }
@@ -32,16 +32,6 @@ variable "instance_type" {
 variable "admin_username" {
   description = "Administrator user name for mysql"
   default     = "hashicorp"
-}
-
-variable "height" {
-  default     = "400"
-  description = "Image height in pixels."
-}
-
-variable "width" {
-  default     = "600"
-  description = "Image width in pixels."
 }
 
 variable "placeholder" {
